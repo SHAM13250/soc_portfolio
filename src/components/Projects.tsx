@@ -23,9 +23,12 @@ export function Projects() {
             >
               <p className="font-mono text-xs text-muted">CASE {String(index + 1).padStart(2, "0")}</p>
               <h3 className="mt-2 text-lg font-semibold text-ink">{project.title}</h3>
-              <ul className="mt-4 flex-1 space-y-2 text-sm leading-6 text-muted">
+              <ul className="mt-4 flex-1 space-y-2.5 text-sm leading-6 text-muted">
                 {project.highlights.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item} className="flex items-start gap-2">
+                    <span className="mt-1 select-none text-xs text-cyan" aria-hidden="true">▸</span>
+                    <span>{item}</span>
+                  </li>
                 ))}
               </ul>
               <ul className="mt-5 flex flex-wrap gap-2">

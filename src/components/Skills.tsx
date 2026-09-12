@@ -19,14 +19,13 @@ export function Skills() {
         <SectionHeading kicker="02 / CAPABILITIES" title="Skills matrix" id="skills-heading" />
 
         <div
-          role="tablist"
+          role="group"
           aria-label="Filter skills by category"
           className="mb-8 flex flex-wrap gap-2"
         >
           <button
             type="button"
-            role="tab"
-            aria-selected={active === "all"}
+            aria-pressed={active === "all"}
             onClick={() => setActive("all")}
             className={`rounded-full border px-3 py-1.5 text-sm transition ${
               active === "all"
@@ -40,8 +39,7 @@ export function Skills() {
             <button
               key={cat.id}
               type="button"
-              role="tab"
-              aria-selected={active === cat.id}
+              aria-pressed={active === cat.id}
               onClick={() => setActive(cat.id)}
               className={`rounded-full border px-3 py-1.5 text-sm transition ${
                 active === cat.id

@@ -50,7 +50,7 @@ export const profile = {
     {
       id: "frameworks",
       label: "Frameworks & Methodologies",
-      items: ["OWASP Top 10", "MITRE ATT&CK Framework", "Red Team Concepts"],
+      items: ["OWASP Top 10", "MITRE ATT&CK Framework", "Basic Red Team Concepts"],
     },
     {
       id: "network",
@@ -68,7 +68,7 @@ export const profile = {
     },
     {
       id: "programming",
-      label: "Programming & Web Security",
+      label: "Programming & Web Technologies",
       items: [
         "Python",
         "JavaScript",
@@ -81,13 +81,13 @@ export const profile = {
     },
     {
       id: "labs",
-      label: "Platforms & Labs",
+      label: "Hands-on Labs",
       items: [
         "PortSwigger Web Security Academy",
         "Hack The Box (HTB)",
         "TryHackMe",
-        "LetsDefend Labs",
         "CTF Challenges",
+        "LetsDefend Labs and Challenges",
       ],
     },
   ],
@@ -96,21 +96,21 @@ export const profile = {
       id: "phishing",
       title: "AI-Powered Phishing Detection System",
       url: "https://github.com/Poovarasan-29/AI-Powered-Phishing-Detection",
-      tags: ["Python", "Machine Learning", "Phishing", "Email Security"],
+      tags: ["Python", "Machine Learning", "Phishing Detection", "Email Security"],
       highlights: [
-        "Co-developed an ML-based detection tool targeting malicious URLs and phishing emails.",
-        "Analyzed email headers, domain traits, and content patterns.",
-        "Built feature extraction pipelines in Python.",
+        "Co-developed a machine learning-based detection tool designed to identify malicious URLs and phishing emails.",
+        "Analyzed email headers, domain traits, and content patterns to minimize false positives during threat intake.",
+        "Implemented feature extraction logic using Python to preprocess incoming datasets for model training and evaluation.",
       ],
     },
     {
       id: "caesar",
       title: "Caesar Cipher Encryption & Decryption Tool",
       url: "https://github.com/SHAM13250/Encryption-and-Decryption",
-      tags: ["Cryptography", "Confidentiality", "Symmetric Encryption"],
+      tags: ["Cryptography", "Python", "Confidentiality", "Symmetric Encryption"],
       highlights: [
-        "Created a lightweight cryptographic utility executing character shifting.",
-        "Demonstrated core principles of data confidentiality and symmetric encryption.",
+        "Developed a lightweight cryptographic utility to perform character shifting encryption and decryption.",
+        "Demonstrated fundamental concepts of data confidentiality, symmetric key mechanisms, and input validation.",
       ],
     },
     {
@@ -119,7 +119,8 @@ export const profile = {
       url: "https://github.com/SHAM13250/Password-Strength-Checker/tree/main/password%20strength%20checker",
       tags: ["Credential Security", "Entropy", "Brute-Force Resistance"],
       highlights: [
-        "Built an interactive tool evaluating credential entropy, complexity, and length to resist brute-force attacks.",
+        "Built an interactive assessment tool to evaluate password complexity based on character sets, entropy, and length.",
+        "Provided actionable feedback to users for enhancing credential security and resisting brute-force/dictionary attacks.",
       ],
     },
   ],
@@ -162,6 +163,8 @@ export const profile = {
   ],
   education: {
     degree: "Bachelor of Technology (B.Tech) in Information Technology",
+    institution: "Hindusthan College of Engineering and Technology, Coimbatore, Tamil Nadu, India",
+    period: "Nov 2022 — May 2026",
   },
 } as const;
 
@@ -171,4 +174,5 @@ export const navLinks = [
   { href: "#projects", label: "Projects" },
   { href: "#certifications", label: "Certifications" },
   { href: "#education", label: "Education" },
+  { href: "#contact", label: "Contact" },
 ] as const;

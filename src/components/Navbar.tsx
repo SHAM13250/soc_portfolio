@@ -22,6 +22,25 @@ export function Navbar() {
     };
   }, [open]);
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) setOpen(false);
+    };
+
+    if (open) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [open]);
+
   const close = () => setOpen(false);
 
   return (
@@ -94,6 +113,19 @@ export function Navbar() {
                 </a>
               </li>
             ))}
+            <li className="pt-2">
+              <button
+                type="button"
+                onClick={() => {
+                  close();
+                  downloadResumePdf();
+                }}
+                className="flex w-full items-center justify-center gap-2 rounded-md bg-cyan px-4 py-2.5 text-sm font-semibold text-void transition hover:bg-white"
+              >
+                <Download className="size-4" aria-hidden="true" />
+                Download PDF Resume
+              </button>
+            </li>
           </ul>
         </nav>
       ) : null}

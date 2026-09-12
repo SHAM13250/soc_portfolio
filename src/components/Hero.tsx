@@ -65,14 +65,14 @@ export function Hero() {
 
           <div
             className="mt-6 rounded-lg border border-line bg-panel p-4 font-mono text-sm glow-cyan"
-            aria-live="polite"
           >
             <p className="text-cyan-dim">root@soc-analyst:~$</p>
             <p className="mt-2 text-ink">
-              role: <span className="text-cyan">{text}</span>
+              role: <span className="text-cyan" aria-hidden="true">{text}</span>
               <span className="ml-0.5 inline-block w-2 animate-pulse bg-cyan" aria-hidden="true">
                 &nbsp;
               </span>
+              <span className="sr-only">{profile.typingRoles[roleIndex]}</span>
             </p>
           </div>
 
@@ -118,7 +118,7 @@ export function Hero() {
               href="#projects"
               className="inline-flex items-center gap-2 rounded-md bg-white/5 px-4 py-2 text-sm text-ink hover:bg-white/10"
             >
-              View detections
+              View projects
             </a>
           </div>
         </div>

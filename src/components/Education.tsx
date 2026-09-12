@@ -11,16 +11,20 @@ export function Education() {
     >
       <div className="mx-auto max-w-6xl">
         <SectionHeading kicker="05 / ACADEMICS" title="Education" id="education-heading" />
-        <article className="max-w-2xl rounded-xl border border-line bg-panel p-6">
-          <div className="flex items-start gap-4">
-            <span className="rounded-md border border-cyan/30 bg-cyan/10 p-2 text-cyan">
+        <article className="max-w-3xl rounded-xl border border-line bg-panel p-6 sm:p-8">
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
+            <span className="self-start rounded-md border border-cyan/30 bg-cyan/10 p-2.5 text-cyan">
               <GraduationCap className="size-6" aria-hidden="true" />
             </span>
-            <div>
-              <h3 className="text-lg font-semibold">{profile.education.degree}</h3>
-              <p className="mt-2 text-sm text-muted">
-                Information Technology foundation supporting SOC analysis, networking, and secure
-                application review.
+            <div className="flex-1">
+              <span className="inline-block rounded-full border border-emerald/30 bg-emerald/10 px-3 py-0.5 font-mono text-xs text-emerald">
+                {profile.education.period}
+              </span>
+              <h3 className="mt-2 text-xl font-semibold text-ink">{profile.education.degree}</h3>
+              <p className="mt-1 text-sm text-cyan">{profile.education.institution}</p>
+              <p className="mt-3 text-sm leading-relaxed text-muted">
+                Rigorous Information Technology foundation covering computer networking, system architecture,
+                cryptography, secure software engineering, and defensive cybersecurity operations.
               </p>
             </div>
           </div>
