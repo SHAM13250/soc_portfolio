@@ -60,6 +60,7 @@ export function Hero() {
           <p className="font-mono text-xs tracking-[0.3em] text-cyan">BLUE TEAM // SOC</p>
           <h1 className="mt-3 text-4xl font-semibold tracking-tight text-ink sm:text-5xl lg:text-6xl">
             {profile.name}
+            <span className="sr-only"> — Shamkumar Portfolio</span>
           </h1>
           <p className="mt-3 max-w-xl text-base text-muted sm:text-lg">{profile.roleTitle}</p>
 

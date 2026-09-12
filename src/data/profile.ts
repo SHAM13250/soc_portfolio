@@ -11,7 +11,7 @@ export const profile = {
   social: {
     linkedin: "https://linkedin.com/in/sham-kumar-95277a307",
     github: "https://github.com/SHAM13250",
-    portfolio: "https://shamkumar-portfolio.lovable.app",
+    portfolio: "https://shamkumar-portfolio.vercel.app",
   },
   summary:
     "Dedicated Cybersecurity Analyst and Blue Team enthusiast with hands-on experience in SOC operations, incident response, network packet analysis, and web application security. Proficient in monitoring, threat detection, log analysis, and malware triage using tools like Splunk, Wireshark, and Burp Suite. Passionate about leveraging automation, machine learning models, and security frameworks like OWASP Top 10 and MITRE ATT&CK to protect enterprise infrastructures.",
