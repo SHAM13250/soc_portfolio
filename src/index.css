@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-void: #0b0f17;
+  --color-panel: #111827;
+  --color-panel-2: #0f1623;
+  --color-line: #1e2a3a;
+  --color-cyan: #00f2fe;
+  --color-cyan-dim: #0891b2;
+  --color-emerald: #34d399;
+  --color-ink: #e6edf7;
+  --color-muted: #94a3b8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--color-void);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-cyan) 35%, transparent);
+  color: #041016;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 3px;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgb(0 242 254 / 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(0 242 254 / 0.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.scanlines {
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgb(255 255 255 / 0.015),
+    rgb(255 255 255 / 0.015) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+.glow-cyan {
+  box-shadow: 0 0 0 1px rgb(0 242 254 / 0.18), 0 0 32px rgb(0 242 254 / 0.08);
+}
